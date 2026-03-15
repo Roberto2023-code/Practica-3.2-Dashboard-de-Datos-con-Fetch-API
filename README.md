@@ -5,10 +5,15 @@ Este proyecto consiste en una aplicación web dinámica que consume datos de una
 
 🎯 Objetivos Cumplidos
 De acuerdo con la Práctica 2: Dashboard de Datos con Fetch API , se han cubierto los siguientes criterios de evaluación:
+
 Consumo de API con Fetch: Implementación de peticiones HTTP asíncronas utilizando la sintaxis moderna de async/await.
+
 Manejo de Errores: Uso de bloques try/catch/finally para gestionar fallos de red y estados de la interfaz.
+
 Renderizado Dinámico: Generación de tarjetas (cards) interactivas en el DOM a partir de datos JSON.
+
 Peticiones Anidadas: Carga de publicaciones (posts) específicas de un usuario al interactuar con su perfil.
+
 Filtrado en Tiempo Real: Buscador funcional que filtra usuarios sin recargar la página.
 
 🚀 Instrucciones de Ejecución
