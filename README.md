@@ -16,6 +16,8 @@ Peticiones Anidadas: Carga de publicaciones (posts) específicas de un usuario a
 
 Filtrado en Tiempo Real: Buscador funcional que filtra usuarios sin recargar la página.
 
+
+
 🚀 Instrucciones de Ejecución
 Para ejecutar este proyecto de forma local, sigue estos pasos:
 
@@ -32,6 +34,7 @@ Se descargará la carpeta del proyecto en tu computadora.
 Navega a la carpeta del proyecto y abre el archivo dashboard.html en tu navegador.
 
 3. Uso:
+
 Presiona "Cargar Usuarios" para obtener los datos de la API.
 
 Usa el buscador para filtrar usuarios por nombre en tiempo real.
