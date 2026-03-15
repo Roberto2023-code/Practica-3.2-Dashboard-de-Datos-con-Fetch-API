@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard dinámico con Fetch API y visualización de posts en modales">
+    <title>Dashboard de Usuarios - Práctica 3.2</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard de Usuarios</h1>
+        <div id="estado"></div> 
+    </header>
+
+    <main class="contenedor-wide">
+        <section id="controles">
+            <input type="search" id="busqueda" placeholder="Buscar usuario por nombre...">
+            <button id="btnCargar">Cargar Usuarios</button>
+            <button id="btnLimpiar">Limpiar Dashboard</button>
+        </section>
+
+        <div id="spinner" hidden>
+            <p>⏳ Cargando datos desde la API...</p>
+        </div>
+
+        <section id="contenedor-usuarios"></section>
+    </main>
+
+    <div id="modal-posts" class="modal-overlay">
+        <div class="modal-ventana">
+            <header class="modal-header">
+                <h2 id="modal-titulo">Publicaciones del Usuario</h2>
+                <button id="btnCerrarModal" class="btn-cerrar" aria-label="Cerrar modal">&times;</button>
+            </header>
+            <div id="modal-contenido" class="modal-body"></div>
+        </div>
+    </div>
+
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

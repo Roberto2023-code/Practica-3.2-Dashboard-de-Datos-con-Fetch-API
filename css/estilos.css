@@ -1,0 +1,335 @@
+/* Estilos base para una mejor UX */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#titulo {
+    color: #1F3864;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.contenedor {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Área de entrada, Mejora para el input*/
+.input-area {
+    display: flex;
+    gap: 10px;
+}
+
+.input-area input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.input-area button {
+    background-color: #2E5FA3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.input-area button:hover {
+    background-color: #1F3864;
+}
+
+/* Lista de tareas */
+#listaTareas {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#listaTareas li {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    transition: all 0.2s;
+    gap: 10px; /* Espaciado uniforme entre texto y botones */
+}
+
+ /*Mejora visual para tareas, Hace que al pasar el mouse se vea interactivo.*/
+#listaTareas li:hover {
+    background-color: #f2f2f2;
+}
+
+#listaTareas span{
+    cursor:pointer;
+    flex: 1; /* Esto hace que el span crezca y empuje los botones al final */
+    word-break: break-word; /* Permite que el texto largo se divida en varias líneas si es necesario */
+    margin: 0 10px; /* Espaciado entre el texto y los botones */
+}
+
+/* Clase activada por JavaScript */
+.completada {
+    text-decoration: line-through;
+    color: #888;
+    background-color: #f9f9f9;
+    opacity:0.6;
+}
+
+/* Botón eliminar */
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+
+/* Estilo para el input de edición in-place */
+.edit-input {
+    flex: 1;
+    padding: 4px;
+    border: 1px dashed #2E5FA3;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.btn-editar {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.btn-editar:hover {
+    transform: scale(1.2);
+}
+
+/* 3. Asegurar que los botones no se encojan si el texto es largo */
+.btn-editar, .btn-eliminar {
+    flex-shrink: 0;
+}
+
+
+
+
+
+
+
+/* --- ESTILOS PARA EL DASHBOARD (PRÁCTICA 3.2) --- */
+
+/* Contenedor más ancho para el Dashboard */
+.contenedor-wide {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 95%;
+    max-width: 900px; /* Más espacio para las tarjetas */
+    margin-top: 20px;
+}
+
+/* Grid dinámico para las tarjetas de usuario */
+#contenedor-usuarios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+/* Estilo de la Tarjeta (Card) */
+.tarjeta-usuario {
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tarjeta-usuario:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #2E5FA3;
+}
+
+.tarjeta-usuario h3 {
+    margin: 0;
+    color: #1F3864;
+    font-size: 1.2rem;
+    border-bottom: 2px solid #f4f4f9;
+    padding-bottom: 5px;
+}
+
+.tarjeta-usuario p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Estado y Spinner */
+#estado {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.estado-ok { background-color: #d4edda; color: #155724; }
+.estado-error { background-color: #f8d7da; color: #721c24; }
+
+#spinner {
+    text-align: center;
+    color: #2E5FA3;
+    font-style: italic;
+    padding: 20px;
+}
+
+
+/* Estilo para los posts dentro de la tarjeta */
+.posts-container {
+    margin-top: 10px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-left: 3px solid #2E5FA3;
+    font-size: 0.85rem;
+    border-radius: 4px;
+}
+
+.post-item {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 3px;
+}
+
+/* Estilo para el botón de posts */
+.btn-posts {
+    background-color: #f4f4f9;
+    border: 1px solid #2E5FA3;
+    color: #2E5FA3;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.btn-posts:hover {
+    background-color: #2E5FA3;
+    color: white;
+}
+
+
+
+
+
+
+
+
+/* --- ESTILOS DEL MODAL --- */
+
+/* Fondo oscurecido que cubre toda la pantalla */
+.modal-overlay {
+    display: none; /* Asegura que no se vea al cargar la página */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Fondo oscuro semitransparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Siempre por encima del dashboard */
+}
+
+/* Evitar que el scroll del fondo se mueva cuando el modal esté abierto */
+body.modal-abierto {
+    overflow: hidden;
+}
+
+/* Ventana blanca del modal */
+.modal-ventana {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    max-height: 85vh;
+    border-radius: 12px;
+    overflow: hidden; /* Corta el contenido que sobresalga de los bordes redondeados */
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes aparecer {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Cabecera del modal */
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-cerrar {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #888;
+}
+
+.modal-body {
+    padding: 20px;
+    overflow-y: auto; /* Permite scroll solo dentro del contenido del modal */
+}
+
+/* Estilo para cada post dentro del modal */
+.post-card-modal {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 1rem;
+}
+
+.post-card-modal h4 {
+    color: #2E5FA3;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+}
+
+.post-fecha {
+    font-size: 0.75rem;
+    color: #999;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.modal-overlay {
+    display: none; /* Por defecto debe estar oculto */
+    position: fixed;
+    /* ... resto de tus estilos ... */
+}
